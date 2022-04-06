@@ -12,4 +12,10 @@ let(:task) { Task.new }
     project.tasks << task
     expect(project).not_to be_done
   end
+
+  it "marks a project done if it's tasks are completed" do
+    project.tasks << task
+    task.mark_completed
+    expect(project).to be_done
+  end
 end
