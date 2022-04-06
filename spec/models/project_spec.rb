@@ -13,5 +13,3 @@ let(:task) { Task.new }
     expect(project).not_to be_done
   end
 end
-
-
