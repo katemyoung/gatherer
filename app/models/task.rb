@@ -13,4 +13,12 @@ class Task
   def complete?
     @completed
   end
+
+  def part_of_velocity?
+    false
+  end
+
+  def points_towards_velocity
+    0
+  end
 end
