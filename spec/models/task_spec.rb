@@ -21,5 +21,9 @@ describe Task do
       expect(task).not_to be_a_part_of_velocity
       expect(task.points_towards_velocity).to eq(0)
     end
+
+    it "counts a recently" do
+
+    end
   end
 end

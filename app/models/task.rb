@@ -15,7 +15,7 @@ class Task
   end
 
   def part_of_velocity?
-    false
+    false if complete? == false
   end
 
   def points_towards_velocity
