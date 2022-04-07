@@ -8,4 +8,8 @@ class Project
   def done?
     tasks.all?(&:complete?)
   end
+
+  def total_size
+    tasks.sum(&:size)
+  end
 end
