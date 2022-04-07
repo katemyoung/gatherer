@@ -60,6 +60,10 @@ As a team member,
 So that I can personalize my account,
 I want a profile picture to display next to my name.
 
+As a team leader,
+So that I can track how fast my team is working,
+I want to see team velocity for the last three weeks.
+
 ```
 
 
