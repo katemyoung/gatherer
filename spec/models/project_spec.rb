@@ -35,7 +35,7 @@ let(:task) { Task.new }
       expect(project.total_size).to eq(7)
     end
 
-    xit "can calculate remaining size" do
+    it "can calculate remaining size" do
       expect(project.remaining_size).to eq(5)
     end
   end
