@@ -24,4 +24,8 @@ class Project
   def completed_velocity
     tasks.sum(&:points_towards_velocity)
   end
+
+  def current_rate
+    completed_velocity * 1.0 / 21
+  end
 end

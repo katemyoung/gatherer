@@ -72,4 +72,7 @@ How I built this app:
 1. Developed user stories from the specification.
 
 
-Velocity in this context means how many project points completed in the last 3 weeks?
+Velocity in this context means how many total project points completed in the last 3 weeks?
+
+Current rate means how many tasks completed per day, for the last 3 weeks. So can be calculated from velocity, by dividing velocity by 21 days.
+

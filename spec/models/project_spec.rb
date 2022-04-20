@@ -43,5 +43,9 @@ let(:task) { Task.new }
     it "knows its velocity" do
       expect(project.completed_velocity).to eq(3)
     end
+
+    it "knows its rate" do
+      expect(project.current_rate).to eq(1.0 / 7)
+    end
   end
 end
