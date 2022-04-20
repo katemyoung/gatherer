@@ -1,5 +1,5 @@
 class Project
-  attr_accessor :tasks
+  attr_accessor :tasks, :due_date
 
   def initialize
     @tasks = []
@@ -31,5 +31,9 @@ class Project
 
   def projected_days_remaining
     remaining_size / current_rate
+  end
+
+  def on_schedule?
+    projected_days_remaining.days.from_now <= due_date ? true : false
   end
 end
