@@ -70,3 +70,6 @@ I want to see team velocity for the last three weeks.
 How I built this app:
 
 1. Developed user stories from the specification.
+
+
+Velocity in this context means how many project points completed in the last 3 weeks?

@@ -14,7 +14,7 @@ let(:task) { Task.new }
       expect(project).not_to be_done
     end
 
-    it "marks a project done if it's tasks are completed" do
+    it "marks a project done if its tasks are completed" do
       project.tasks << task
       task.mark_completed
       expect(project).to be_done
@@ -38,6 +38,10 @@ let(:task) { Task.new }
 
     it "can calculate remaining size" do
       expect(project.remaining_size).to eq(5)
+    end
+
+    it "knows its velocity" do
+      expect(project.completed_velocity).to eq(3)
     end
   end
 end

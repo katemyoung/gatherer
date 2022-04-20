@@ -20,4 +20,8 @@ class Project
   def remaining_size
     incomplete_tasks.sum(&:size)
   end
+
+  def completed_velocity
+    tasks.select(&:part_of_velocity?).sum(&:size)
+  end
 end
