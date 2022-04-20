@@ -22,6 +22,6 @@ class Project
   end
 
   def completed_velocity
-    tasks.select(&:part_of_velocity?).sum(&:size)
+    tasks.sum(&:points_towards_velocity)
   end
 end
