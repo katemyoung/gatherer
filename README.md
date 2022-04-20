@@ -76,3 +76,5 @@ Velocity in this context means how many total project points completed in the la
 
 Current rate means how many tasks completed per day, for the last 3 weeks. So can be calculated from velocity, by dividing velocity by 21 days.
 
+Projected days remaining takes the current rate and multiples it by the number of project points of incompleted tasks.
+

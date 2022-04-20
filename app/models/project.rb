@@ -28,4 +28,8 @@ class Project
   def current_rate
     completed_velocity * 1.0 / 21
   end
+
+  def projected_days_remaining
+    remaining_size / current_rate
+  end
 end
