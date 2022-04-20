@@ -34,6 +34,7 @@ class Project
   end
 
   def on_schedule?
+    return false if projected_days_remaining.nan?
     projected_days_remaining.days.from_now <= due_date ? true : false
   end
 end
