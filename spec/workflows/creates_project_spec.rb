@@ -29,5 +29,12 @@ RSpec.describe CreatesProject do
       expect(tasks.size).to eq(1)
       expect(tasks.first).to have_attributes(title: "Start things", size: 3)
     end
+
+    it "handles a single string with size zero" do
+      creator = CreatesProject.new(name: "Project Runway", task_string: "Start things:0")
+      tasks = creator.convert_string_to_tasks
+      expect(tasks.size).to eq(1)
+      expect(tasks.first).to have_attributes(title: "Start things", size: 1)
+    end
   end
 end
