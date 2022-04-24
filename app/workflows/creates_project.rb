@@ -11,10 +11,14 @@ class CreatesProject
   end
 
   def convert_string_to_tasks
-    # rubber ducking: needs to seperate out the title from the size
-    task = task_string.split(":")
-    task[1].to_i <= 0 || task[1] == nil ? size = 1 : size = task[1]
-    arr = []
-    arr.push(Task.new(title: task[0], size: size))
+    # rubber ducking: needs to seperate multiple strings into individual tasks
+    task_string.split("\n").map do |one_task|
+      title, size_string = one_task.split(":") #parallel assignment
+      Task.new(title: title, size: size_as_integer(size_string))
+    end
+  end
+
+  def size_as_integer(size_string)
+   size_string.to_i <= 0 || size_string == nil ? 1 : size_string.to_i
   end
 end
