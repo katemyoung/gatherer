@@ -11,8 +11,9 @@ class CreatesProject
   end
 
   def convert_string_to_tasks
-    # rubber ducking: needs to return an array of tasks objects
+    # rubber ducking: needs to seperate out the title from the size
+    task = task_string.split(":")
     arr = []
-    arr.push(Task.new(title: task_string, size: 1))
+    arr.push(Task.new(title: task[0], size: task[1]))
   end
 end
