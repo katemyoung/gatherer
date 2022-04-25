@@ -59,5 +59,13 @@ RSpec.describe CreatesProject do
         [an_object_having_attributes(title: "Start things", size: 3),
          an_object_having_attributes(title: "End things", size: 2)])
     end
+
+    it "attaches tasks to the project" do
+      creator = CreatesProject.new(name: "Project Runway", task_string: "Start things:3\nEnd things:2")
+      tasks = creator.convert_string_to_tasks
+      creator.create
+      expect(creator.project.tasks.size).to eq(2)
+      expect(creator.project).not_to be_a_new_record 
+    end
   end
 end
